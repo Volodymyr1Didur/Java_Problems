@@ -3,15 +3,22 @@ import java.util.Scanner;
 public class Controller {
     private Model model = new Model();
     private View view = new View();
+
     public Controller(Model model, View view ){
         this.model = model;
         this.view =view;
     }
 
-    public void mainProcess(){
-        checkTheConditionCondition(model.newAttempt(inputNewNumber2Filt(inputNewNumber1Filt())));
+    public void start(){
+        this.view.printMassage(view.START);
+        model.secretValue();
     }
-    public int inputNewNumber1Filt() {
+
+    public void mainProcess(){
+        checkTheConditionCondition(model.newAttempt(inputNewNumber2Filter(inputNewNumber1Filter())));
+    }
+
+    public int inputNewNumber1Filter() {
         Scanner sc = new Scanner(System.in);
         this.view.printMassage(view.INPUT_NEW_NUMbER);
         while (!sc.hasNextInt()) {
@@ -22,10 +29,10 @@ public class Controller {
         return value;
     }
 
-    public int inputNewNumber2Filt(int value) {
+    public int inputNewNumber2Filter(int value) {
         if (value < model.getBottomBrd() || value > model.getTopBrd()) {
             this.view.printMassage(view.INPUT_NUMBER_IN+": ["+model.getBottomBrd()+", "+model.getTopBrd()+"]");
-            return inputNewNumber2Filt(inputNewNumber1Filt());
+            return inputNewNumber2Filter(inputNewNumber1Filter());
         }
         else{
             return value;

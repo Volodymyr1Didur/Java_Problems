@@ -5,8 +5,13 @@ public class Model {
     public int bottomBrd = 0;
     public int topBrd = 100;
     public Random rand = new Random();
-    public final int guessedNumber = rand.nextInt(100);
+    public int guessedNumber = rand.nextInt(100);
     public int lastTry;
+
+    public void secretValue(){
+        Random rand = new Random();
+        guessedNumber = rand.nextInt(100);
+    }
 
     public int newAttempt(int number){
         if(guessedNumber == number) return 0;
