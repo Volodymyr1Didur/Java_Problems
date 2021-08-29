@@ -5,21 +5,17 @@ public class View {
     public String LAST_TRY = "Last Try: ";
     public String BORDERS = " Borders of the mystery number: ";
     public String COMMA = ", ";
-    public String PREVIOUS = "Previous attempts:";
-    public String MORE = "Answer: Try is More";
-    public String LESS = "Answer: Try is Less";
+    public String MORE = "Answer: Secret number is BIGGER";
+    public String LESS = "Answer: Secret number is SMALLER";
     public String INPUT_NEW_NUMbER = "Input new number";
     public String WRONG_INPUR_ENTER_INT_NUMBER = "Wrong input, enter int number";
-    public String INPUT_NUMBER_IN = "Input number in borders";
+    public String INPUT_NUMBER_IN = "Inputted number not in borders";
 
     public void inputLastTryAndBorders(int lastTry, int bottomBrd, int topBrg){
         System.out.println("Last Try: " + lastTry + "| Borders of the mystery number: [" + bottomBrd +", "+ topBrg+"]");
     }
     public void printMassage(String massage) {
         System.out.println(massage);
-    }
-    public void printMassageNotLn(String massage){
-        System.out.print(massage);
     }
 
 
