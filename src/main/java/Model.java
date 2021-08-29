@@ -34,5 +34,19 @@ public class Model {
 
     public int getLastTry(){return lastTry;}
 
+    public void setBottomBrd(int bottomBrd){
+        this.bottomBrd = bottomBrd;
+    }
+    public void setTopBrd(int topBrd) {
+        this.topBrd = topBrd;
+    }
+    public void setLastTry(int lastTry){
+        this.lastTry = lastTry;
+    }
+    public void setSecretValue(int secretValue){
+        this.guessedNumber = secretValue;
+    }
+
+
 }
 
